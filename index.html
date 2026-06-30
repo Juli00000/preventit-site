@@ -125,6 +125,55 @@
       transition: color 0.2s ease;
     }
     .footer a:hover { color: var(--mint); }
+
+    /* Rechtstexte (Datenschutzerklärung) */
+    .legal {
+      background: #0d0d0d;
+      color: rgba(255, 255, 255, 0.9);
+      padding: 4rem 1.5rem;
+    }
+    @media (min-width: 640px) { .legal { padding: 5rem 2.5rem; } }
+    .legal-inner {
+      max-width: 52rem;
+      margin: 0 auto;
+      line-height: 1.7;
+      font-size: 1rem;
+    }
+    .legal h2 {
+      font-family: "Playfair Display", serif;
+      font-weight: 700;
+      font-size: clamp(2rem, 5vw, 2.75rem);
+      margin-bottom: 0.5rem;
+    }
+    .legal .stand { color: rgba(255, 255, 255, 0.6); margin-bottom: 2.5rem; }
+    .legal h3 {
+      color: var(--mint);
+      font-size: 1.35rem;
+      margin: 2.5rem 0 0.75rem;
+    }
+    .legal h4 {
+      color: rgba(255, 255, 255, 0.95);
+      font-size: 1.1rem;
+      margin: 1.75rem 0 0.5rem;
+    }
+    .legal p { margin-bottom: 1rem; }
+    .legal ul { margin: 0 0 1rem 1.25rem; }
+    .legal li { margin-bottom: 0.35rem; }
+    .legal a { color: var(--mint); }
+    .legal .table-wrap { overflow-x: auto; margin: 1rem 0 1.5rem; }
+    .legal table {
+      border-collapse: collapse;
+      width: 100%;
+      min-width: 36rem;
+      font-size: 0.9rem;
+    }
+    .legal th, .legal td {
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      padding: 0.6rem 0.75rem;
+      text-align: left;
+      vertical-align: top;
+    }
+    .legal th { background: rgba(255, 255, 255, 0.06); color: #fff; }
   </style>
 </head>
 <body>
@@ -168,5 +217,183 @@ Wir unterstützen Sie gern.</p>
       </footer>
     </div>
   </div>
+
+  <section id="datenschutz" class="legal">
+    <div class="legal-inner">
+      <h2>Datenschutzerklärung</h2>
+      <p class="stand">Stand: 10. Mai 2026</p>
+
+      <h3>1. Verantwortliche</h3>
+      <p>Verantwortliche im Sinne der Datenschutz-Grundverordnung (DSGVO) und anderer datenschutzrechtlicher Bestimmungen ist:</p>
+      <p>Dr. Julia Danckwerth<br />
+        Pücklerstraße 12<br />
+        03042 Cottbus<br />
+        E-Mail: <a href="mailto:info@preventit.tech">info@preventit.tech</a></p>
+      <p>Eine Datenschutzbeauftragte ist nicht bestellt, da die gesetzlichen Voraussetzungen hierfür nicht vorliegen.</p>
+
+      <h3>2. Grundsatz: Nutzung ohne Registrierung und datenarme Gestaltung</h3>
+      <p>Der Schutz Deiner Privatsphäre hat für uns hohe Priorität. Unser KI-gestützter Chat wurde bewusst so konzipiert, dass Du ihn ohne Registrierung, ohne Anmeldung und ohne Profilerstellung nutzen kannst.</p>
+      <p>Es werden keine Nutzerkonten angelegt. Es erfolgt kein Tracking des Nutzungsverhaltens im Chat. Chat-Verläufe werden von uns nicht dauerhaft gespeichert.</p>
+      <p>Bitte beachte jedoch: Eine vollständig anonyme Nutzung kann technisch nicht in jedem Fall zugesichert werden. Beim Aufruf der Website werden technisch notwendige Server-Logdaten verarbeitet (Einzelheiten siehe Abschnitt 4). Chat-Nachrichten können personenbezogene Daten enthalten, wenn Du solche Daten selbst eingibst.</p>
+      <p>Bitte gib daher nur diejenigen Informationen ein, die für Deine konkrete Frage erforderlich sind. Hinweise zu besonderen Kategorien personenbezogener Daten findest Du in Abschnitt 5.</p>
+
+      <h3>3. KI-gestütztes Assistenzsystem und eingesetzte Dienstleister</h3>
+      <p>WhisperToMe nutzt die Mistral AI API in Verbindung mit einem Retrieval-Augmented-Generation-Verfahren (RAG). Die KI durchsucht bei jeder Anfrage ausschließlich einen geschlossenen, von uns kuratierten Bestand geprüfter Gesetzestexte und juristischer Fachdokumente. Es erfolgt keine Internetsuche, keine Webrecherche und kein Zugriff auf externe Datenquellen durch das Chat-System.</p>
+      <p>Die Antworten werden auf Grundlage dieser geprüften Dokumente sowie des im Sprachmodell enthaltenen allgemeinen juristischen Fachwissens zum deutschen Strafrecht generiert. Das System dient der allgemeinen Information und ersetzt keine individuelle Rechtsberatung.</p>
+
+      <h4>3.1 Eingesetzte Auftragsverarbeiter</h4>
+      <p>Folgende Dienstleister verarbeiten in unserem Auftrag personenbezogene Daten gemäß Art. 28 DSGVO:</p>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Anbieter</th><th>Funktion</th><th>Standort</th><th>Drittland</th><th>Vertrag</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Mistral AI SAS, Paris (FR)</td><td>KI-Chat-Verarbeitung (LLM-API)</td><td>EU (FR)</td><td>Nein</td><td>DPA via Scale-Tarif</td></tr>
+            <tr><td>Hetzner Online GmbH, Gunzenhausen (DE)</td><td>Hosting Frontend &amp; Backend</td><td>DE</td><td>Nein</td><td>Personalisierter AV-Vertrag</td></tr>
+            <tr><td>Supabase Inc., USA</td><td>Wissensdatenbank (pgvector)</td><td>EU (Stockholm, SE)</td><td>Vertragspartner USA, Daten EU</td><td>Personalisierter DPA mit SCC</td></tr>
+            <tr><td>Upstash, Inc., USA</td><td>Rate Limiting (Redis)</td><td>EU (Frankfurt, DE)</td><td>Vertragspartner USA, Daten EU</td><td>DPA via ToS mit SCC</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>Mit allen aufgeführten Auftragsverarbeitern bestehen Verträge zur Auftragsverarbeitung gemäß Art. 28 DSGVO. Eine vollständige Liste der jeweiligen Subprozessoren wird auf den Trust- und Compliance-Seiten der Anbieter geführt.</p>
+
+      <h4>3.2 Datenverarbeitung im Chat</h4>
+      <p>Wenn Du eine Nachricht in den Chat eingibst, wird diese verarbeitet wie folgt:</p>
+      <ul>
+        <li>Übermittlung an unseren Backend-Server bei Hetzner Cloud (Deutschland), verschlüsselt via HTTPS/TLS</li>
+        <li>Strukturierte Analyse der Eingabe durch die Mistral AI API (Aufruf 1, Modell: Mistral Small)</li>
+        <li>Erstellung eines Embeddings (numerische Repräsentation) und Abruf passender Inhalte aus der Wissensdatenbank bei Supabase (Stockholm/EU)</li>
+        <li>Generierung der Antwort durch die Mistral AI API (Aufruf 2, Modell: Mistral Large)</li>
+        <li>Rückgabe an Dein Endgerät</li>
+      </ul>
+      <p>Zwischen den Mistral-Aufrufen läuft ein eigener Sicherheitsfilter, der bei Hinweisen auf akute Gefährdung automatisch passende Notrufnummern in die Antwort einblendet – unabhängig vom KI-Output.</p>
+
+      <h4>3.3 Keine dauerhafte Speicherung durch uns</h4>
+      <p>Chat-Nachrichten werden von WhisperToMe nicht dauerhaft gespeichert. Nach der Generierung der Antwort wird die Anfrage von uns nicht archiviert und keinem Nutzerprofil zugeordnet.</p>
+      <p>Mistral AI verarbeitet die Anfragen mit aktivierter „Zero Data Retention“ – das bedeutet: Mistral speichert weder Eingaben noch Ausgaben dauerhaft, auch nicht für Fehlerbehebung oder Modell-Training. Diese Einstellung ist in unserem Mistral-Workspace dauerhaft aktiviert. Eingaben und Ausgaben werden zudem nicht zum Training der Mistral-Modelle verwendet.</p>
+      <p>Supabase verarbeitet Suchanfragen-Embeddings transient für die Suche in der Wissensdatenbank, ohne sie persistent zu speichern. Die Wissensdatenbank selbst enthält ausschließlich kuratierte, öffentliche Rechtsquellen – keine personenbezogenen Daten.</p>
+      <p>Upstash speichert IP-Adressen ausschließlich kurzzeitig (max. 60 Sekunden) für die Rate-Limit-Prüfung; danach werden sie automatisch verworfen.</p>
+
+      <h4>3.4 Drittlandhinweis</h4>
+      <p>Chat-Inhalte werden ausschließlich innerhalb des Europäischen Wirtschaftsraums (EWR) verarbeitet. Mistral AI nutzt für die Chat-Verarbeitung Microsoft-Cloud-Infrastruktur in Schweden bzw. Norwegen sowie CoreWeave als Inferenz-Provider im EWR.</p>
+      <p>Supabase Inc. (USA) und Upstash, Inc. (USA) sind als US-Unternehmen Vertragspartner; die für WhisperToMe genutzten Server befinden sich jedoch ausschließlich im EWR (Stockholm/Schweden bzw. Frankfurt/Deutschland). Für diese vertraglichen Beziehungen sind in den jeweiligen Datenverarbeitungsverträgen Standardvertragsklauseln (SCC) der EU-Kommission gemäß Durchführungsbeschluss (EU) 2021/914 integriert.</p>
+      <p>Mistrals Subprozessoren für Billing- und Account-Funktionen (z. B. Stripe Inc., Twilio Inc.) befinden sich teilweise in den USA. Diese verarbeiten ausschließlich Vertragsdaten der Verantwortlichen (nicht Chat-Inhalte) und sind ebenfalls durch SCC abgesichert.</p>
+
+      <h4>3.5 Rechtsgrundlage</h4>
+      <p>Die Verarbeitung der Chat-Nachricht erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse). Unser berechtigtes Interesse liegt in der Bereitstellung eines datensparsamen, KI-gestützten Informationsangebots zur niedrigschwelligen rechtlichen Orientierung für Betroffene von sexualisierter und häuslicher Gewalt.</p>
+      <p>Die kurzzeitige Verarbeitung von IP-Adressen durch Upstash zum Zweck des Rate Limitings stützt sich auf Art. 6 Abs. 1 lit. f DSGVO; das berechtigte Interesse liegt in der technischen Sicherheit des Dienstes (Schutz vor automatisiertem Missbrauch und Überlastung).</p>
+      <p>Soweit besondere Kategorien personenbezogener Daten gemäß Art. 9 DSGVO Bestandteil Deiner Eingaben sind (siehe Abschnitt 5), erfolgt die Verarbeitung auf Grundlage von Art. 9 Abs. 2 lit. d DSGVO im Rahmen der rechtmäßigen Tätigkeit zum Zweck des sozialen Schutzes, ergänzend Art. 6 Abs. 1 lit. f DSGVO.</p>
+
+      <h3>4. Server-Logfiles</h3>
+      <p>Beim Aufruf der Website werden technisch notwendige Server-Logdaten in der Anwendung verarbeitet. Diese enthalten ausdrücklich keine IP-Adressen.</p>
+      <p>Konkret werden gespeichert:</p>
+      <ul>
+        <li>Zeitstempel der Anfrage</li>
+        <li>HTTP-Methode und aufgerufene URL</li>
+        <li>HTTP-Statuscode</li>
+        <li>Anzahl übertragener Bytes</li>
+        <li>User-Agent (Browser-Kennung)</li>
+        <li>Antwortzeit</li>
+      </ul>
+      <p>Diese Logs werden aus Sicherheits- und Diagnosegründen für maximal 7 Tage gespeichert und anschließend automatisch gelöscht.</p>
+      <p>Auf Infrastruktur-Ebene können bei Hetzner als Hosting-Provider zusätzlich technische Netzwerk-Logs anfallen. Hierfür gelten die Aufbewahrungsfristen von Hetzner laut deren Datenschutzerklärung; mit Hetzner besteht ein Auftragsverarbeitungsvertrag gemäß Art. 28 DSGVO.</p>
+      <p><strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. f DSGVO. Berechtigtes Interesse: Stabilität, Sicherheit und Optimierung der Website.</p>
+
+      <h3>5. Hinweise zu besonderen Kategorien personenbezogener Daten (Art. 9 DSGVO)</h3>
+      <p>Aufgrund des Themenfeldes von WhisperToMe (Beratung im Kontext sexualisierter und häuslicher Gewalt) ist es möglich, dass Du in Deinen Chat-Nachrichten besondere Kategorien personenbezogener Daten gemäß Art. 9 DSGVO eingibst – insbesondere:</p>
+      <ul>
+        <li>Gesundheitsdaten (z. B. zu körperlichen oder seelischen Folgen von Gewalt)</li>
+        <li>Daten zum Sexualleben oder zur sexuellen Orientierung</li>
+        <li>Möglicherweise Angaben zu rassischer/ethnischer Herkunft, religiösen oder weltanschaulichen Überzeugungen</li>
+      </ul>
+      <p>Soweit Du solche Daten in den Chat eingibst:</p>
+      <ul>
+        <li>Werden sie ausschließlich transient zur Beantwortung Deiner Anfrage verarbeitet</li>
+        <li>Werden sie nicht dauerhaft gespeichert (weder von uns noch von Mistral AI dank Zero Data Retention)</li>
+        <li>Werden sie nicht zu Profilbildung, Statistik oder Modell-Training verwendet</li>
+      </ul>
+      <p><strong>Rechtsgrundlage:</strong> Art. 9 Abs. 2 lit. d DSGVO (Verarbeitung im Rahmen rechtmäßiger Tätigkeiten zum Zweck des sozialen Schutzes), ergänzend Art. 6 Abs. 1 lit. f DSGVO.</p>
+      <p>Wir empfehlen ausdrücklich: Gib nur diejenigen Informationen ein, die für Deine konkrete Frage erforderlich sind.</p>
+
+      <h3>6. Speicherdauer</h3>
+      <p>Wir speichern personenbezogene Daten nur so lange, wie dies für die jeweiligen Zwecke erforderlich ist oder gesetzliche Aufbewahrungspflichten bestehen.</p>
+      <p>Im Einzelnen:</p>
+      <ul>
+        <li>Chat-Nachrichten: keine dauerhafte Speicherung; Verarbeitung nur für die Dauer der konkreten Anfrage</li>
+        <li>Server-Logfiles ohne IP: maximal 7 Tage</li>
+        <li>IP-Adressen für Rate Limiting (Upstash): maximal 60 Sekunden</li>
+        <li>Wissensdatenbank-Embeddings (Supabase): transient, keine persistente Speicherung von Anfragen</li>
+      </ul>
+      <p>Soweit Dienstleister Daten in unserem Auftrag verarbeiten, richten sich Löschung und Rückgabe zusätzlich nach den jeweiligen Auftragsverarbeitungsverträgen.</p>
+
+      <h3>7. Sicherheitsmaßnahmen</h3>
+      <p>Wir setzen folgende technische und organisatorische Sicherheitsmaßnahmen um:</p>
+      <ul>
+        <li>Verschlüsselte Übertragung sämtlicher Daten via HTTPS/TLS (Let's Encrypt)</li>
+        <li>Strikte Content-Security-Policy (CSP) zum Schutz vor Cross-Site-Scripting</li>
+        <li>Sicherheits-Header (X-Frame-Options, X-Content-Type-Options, Strict-Transport-Security, Permissions-Policy)</li>
+        <li>Anonymisierte Server-Logs ohne IP-Adressen</li>
+        <li>Rate Limiting zum Schutz vor automatisierten Anfragen</li>
+        <li>Tägliches automatisches Funktionsmonitoring</li>
+        <li>Regelmäßige Sicherheitsaktualisierungen aller eingesetzten Komponenten</li>
+      </ul>
+
+      <h3>8. Cookies, Tracking und Zugriff auf Endgeräte</h3>
+      <p>Wir setzen auf dieser Website keine Cookies und keine Tracking-Tools ein. Die Nutzung ist ohne Registrierung möglich.</p>
+      <p>Es findet kein Tracking des Nutzungsverhaltens im Chat statt. Wir verwenden keine Analyse- oder Marketing-Cookies und erstellen keine Nutzerprofile.</p>
+      <p>Sofern zukünftig Cookies, Local-Storage-Technologien, externe Medien, Captchas, Webanalyse, Marketing-Tools oder vergleichbare Technologien eingesetzt werden, wird diese Datenschutzerklärung entsprechend angepasst. Soweit gesetzlich erforderlich, wird vorher eine Einwilligung nach DSGVO und TDDDG eingeholt.</p>
+
+      <h3>9. SSL- bzw. TLS-Verschlüsselung</h3>
+      <p>Diese Website nutzt aus Sicherheitsgründen und zum Schutz der Übertragung vertraulicher Inhalte eine SSL- bzw. TLS-Verschlüsselung.</p>
+      <p>Eine verschlüsselte Verbindung erkennst Du daran, dass die Adresszeile des Browsers von „http://“ auf „https://“ wechselt und ein Schloss-Symbol angezeigt wird.</p>
+
+      <h3>10. Keine automatisierte Entscheidungsfindung und kein Profiling</h3>
+      <p>Eine automatisierte Entscheidungsfindung im Sinne von Art. 22 DSGVO findet nicht statt. Es erfolgt kein Profiling.</p>
+      <p>Das KI-gestützte Assistenzsystem generiert lediglich allgemeine Informationen auf Grundlage der eingegebenen Anfrage und des hinterlegten Dokumentenbestands. Die Antworten entfalten keine rechtliche Bindungswirkung.</p>
+
+      <h3>11. Hinweis zur KI-Nutzung</h3>
+      <p>Du interagierst bei Nutzung des Chats mit einem KI-gestützten Assistenzsystem. Die Antworten können trotz sorgfältiger Konzeption unvollständig, veraltet oder fehlerhaft sein. Bitte prüfe wichtige Informationen eigenständig oder hole qualifizierten Rechtsrat ein.</p>
+
+      <h3>12. Schutz für besonders schutzbedürftige Nutzer:innen</h3>
+      <p>WhisperToMe richtet sich auch an Personen, die in Bedrohungs- oder Gewaltsituationen besonderen Schutz benötigen. Wir empfehlen Dir folgende einfache Maßnahmen für mehr Privatsphäre:</p>
+      <ul>
+        <li>Nutze den privaten Modus / Inkognito-Tab Deines Browsers, damit der Aufruf nicht im Browser-Verlauf erscheint</li>
+        <li>Lösche nach der Nutzung Deinen Browser-Verlauf, falls Du den privaten Modus nicht nutzen kannst</li>
+        <li>Wir setzen weder Cookies noch Tracking ein – es bleiben somit auf unserer Seite keine Spuren bei Dir auf dem Endgerät</li>
+      </ul>
+      <p>Im akuten Notfall:</p>
+      <ul>
+        <li>Polizei: 110</li>
+        <li>Hilfetelefon Gewalt gegen Frauen: 08000 116 016 (rund um die Uhr, kostenfrei, mehrsprachig, anonym)</li>
+        <li>Männerhilfetelefon: 0800 1239900</li>
+        <li>LGBTQ+-Beratung: regional über LSVD (lsvd.de) oder lokale Beratungsstellen</li>
+      </ul>
+
+      <h3>13. Deine Rechte</h3>
+      <p>Du hast im Rahmen der gesetzlichen Voraussetzungen folgende Rechte:</p>
+      <ul>
+        <li>Recht auf Auskunft über die zu Deiner Person gespeicherten Daten gemäß Art. 15 DSGVO</li>
+        <li>Recht auf Berichtigung unrichtiger Daten gemäß Art. 16 DSGVO</li>
+        <li>Recht auf Löschung gemäß Art. 17 DSGVO</li>
+        <li>Recht auf Einschränkung der Verarbeitung gemäß Art. 18 DSGVO</li>
+        <li>Recht auf Datenübertragbarkeit gemäß Art. 20 DSGVO</li>
+        <li>Recht auf Widerspruch gegen die Verarbeitung gemäß Art. 21 DSGVO</li>
+        <li>Recht auf Widerruf einer erteilten Einwilligung gemäß Art. 7 Abs. 3 DSGVO</li>
+        <li>Recht auf Beschwerde bei einer Datenschutzaufsichtsbehörde gemäß Art. 77 DSGVO</li>
+      </ul>
+      <p>Da wir Chat-Verläufe nicht dauerhaft speichern und keine Nutzerkonten anlegen, kann es sein, dass wir einzelne Chat-Anfragen nachträglich keiner bestimmten Person zuordnen können. In diesem Fall können wir Betroffenenrechte nur erfüllen, soweit eine Identifizierung der betroffenen Person möglich ist.</p>
+      <p><strong>Zuständige Datenschutzaufsichtsbehörde:</strong></p>
+      <p>Die Landesbeauftragte für den Datenschutz und für das Recht auf Akteneinsicht Brandenburg<br />
+        Stahnsdorfer Damm 77<br />
+        14532 Kleinmachnow<br />
+        <a href="https://www.lda.brandenburg.de" target="_blank" rel="noopener">https://www.lda.brandenburg.de</a></p>
+      <p>Du kannst Dich auch an jede andere zuständige Datenschutzaufsichtsbehörde wenden.</p>
+
+      <h3>14. Änderungen dieser Datenschutzerklärung</h3>
+      <p>Wir behalten uns vor, diese Datenschutzerklärung anzupassen, damit sie stets den aktuellen rechtlichen Anforderungen entspricht oder um Änderungen unserer Leistungen umzusetzen.</p>
+      <p>Für Deinen erneuten Besuch gilt dann die jeweils aktuelle Datenschutzerklärung.</p>
+    </div>
+  </section>
 </body>
 </html>
