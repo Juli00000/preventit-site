@@ -8,6 +8,23 @@
   <!-- Favicon: exakt die vorhandene Logodatei /preventit_logo_weiss.png -->
   <link rel="icon" type="image/png" href="/preventit_logo_weiss.png" />
   <link rel="apple-touch-icon" href="/preventit_logo_weiss.png" />
+  <link rel="canonical" href="https://www.preventit.tech/" />
+  <meta name="theme-color" content="#000000" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="preventIT" />
+  <meta property="og:locale" content="de_DE" />
+  <meta property="og:title" content="preventIT — AGG-Konformität neu gelebt" />
+  <meta property="og:description" content="Präventionsstrategie und anonyme Erstorientierung bei sexueller Belästigung und Diskriminierung am Arbeitsplatz. SaaS für AGG-Compliance, EU-souverän." />
+  <meta property="og:url" content="https://www.preventit.tech/" />
+  <meta property="og:image" content="https://www.preventit.tech/preventit_logo_weiss.png" />
+  <meta property="og:image:width" content="2600" />
+  <meta property="og:image:height" content="2600" />
+  <meta property="og:image:alt" content="preventIT Logo" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="preventIT — AGG-Konformität neu gelebt" />
+  <meta name="twitter:description" content="Präventionsstrategie und anonyme Erstorientierung bei sexueller Belästigung und Diskriminierung am Arbeitsplatz." />
+  <meta name="twitter:image" content="https://www.preventit.tech/preventit_logo_weiss.png" />
+  <link rel="preload" as="image" href="/b2b_motiv.png" fetchpriority="high" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet" />
@@ -273,7 +290,7 @@
     .scroll-hint .chev { width: 1.4rem; height: 1.4rem; animation: scrollBounce 1.8s infinite; }
     @keyframes scrollBounce { 0%,100% { transform: translateY(0); opacity: .7; } 50% { transform: translateY(6px); opacity: 1; } }
 
-    .features { background: #0d0d0d; color: #fff; padding: 5rem 1.25rem 6rem; }
+    .features { background: #0d0d0d; color: #fff; padding: 5rem 1.25rem 6rem; content-visibility: auto; contain-intrinsic-size: 1px 700px; }
     .features .wrap { max-width: 72rem; margin: 0 auto; }
     .features h2 { font-family: "Playfair Display", serif; font-weight: 700; font-size: 2rem; line-height: 1.2; text-align: center; margin: 0 0 .75rem; }
     .features-lead { text-align: center; color: rgba(255,255,255,.6); font-style: italic; max-width: 46rem; margin: 0 auto 3.25rem; font-size: 1.05rem; line-height: 1.5; }
@@ -302,7 +319,7 @@
       <header class="header">
         <!-- Logo aus dem Web-Root. Schwarze Schrift auf weiss = weisse Plakette
              auf dem dunklen Motiv. KEIN CSS-Farbfilter. -->
-        <img class="logo" src="/preventit_logo_weiss.png" alt="preventIT" />
+        <img class="logo" src="/preventit_logo_weiss.png" alt="preventIT" decoding="async" fetchpriority="high" width="200" height="200" />
 
         <div class="lang-switch">
           <button class="lang-btn" id="langBtn" type="button" aria-haspopup="true" aria-expanded="false" aria-label="Sprache / Language">
